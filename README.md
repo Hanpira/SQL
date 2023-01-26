@@ -1,2 +1,2 @@
-# SQL
-[Requests (example)](https://github.com/Hanpira/SQL/blob/main/Request%20examples)
+# SQL Requests
+[Examples](https://github.com/Hanpira/SQL/blob/main/Request%20examples)
