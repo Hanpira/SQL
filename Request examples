@@ -1,0 +1,29 @@
+1. Get the list of all cities from the table Suppliers (Получить список всех городов из таблицы Suppliers):
+
+SELECT City FROM Suppliers
+ 
+2. Get the IDs and name of the customers, who have made at least one order. The notes can not be duplicated. (Отобразить ID и имена заказчиков, которые делали хотя бы один заказ. Выводимые записи не должны дублироваться)
+
+SELECT Customers.CustomerID, Customers.CustomerName
+FROM Orders JOIN Customers
+ON Orders.CustomerID = Customers.CustomerID
+GROUP BY Orders.CustomerID
+
+3. Add a new customer to the table (2 variants) (Добавить запись о новом клиенте 2 способами):
+
+1) INSERT INTO Customers (CustomerName, CustomerID, City)
+   VALUES ('Hanna', '95', 'Minsk');
+
+2) INSERT INTO Customers (CustomerName, City);
+   VALUES ('Hanna', 'Minsk');
+   
+   
+4. Delete the information from the table (Удалить запись из таблицы):
+
+DELETE FROM Customers WHERE CustomerID='95'
+
+5. Update the information about the customer in the table Customers (Обновите любую запись в таблице Customers):
+
+UPDATE Customers
+SET CustomerName='Maria', City='London', Country='UK'
+WHERE CustomerID=3
